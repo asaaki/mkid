@@ -1,60 +1,27 @@
 // mkid7 - Quick UUID v7 generator
-// Shortcut for: mkid uuid v7 (or just: mkid)
-// Supports flags: --clipboard, --uppercase, --format, --count
+// Thin wrapper that calls: mkid uuid v7 [args...]
 
-mod cli;
-mod generator;
-mod output;
+use std::env;
+use std::process::{Command, exit};
 
-use anyhow::Result;
-use clap::Parser;
-use cli::UuidArgs;
-use generator::generate_uuid;
-use output::{FormatType, copy_to_clipboard, format_uuid};
+fn main() {
+    // Get the directory where this binary is located
+    let current_exe = env::current_exe().expect("Failed to get current executable path");
+    let bin_dir = current_exe
+        .parent()
+        .expect("Failed to get binary directory");
+    let mkid_path = bin_dir.join("mkid");
 
-#[derive(Parser)]
-#[command(
-    name = "mkid7",
-    about = "Generate UUID v7 (sortable)",
-    long_about = "Quick shortcut to generate UUID v7 (sortable, timestamp-based).\nEquivalent to: mkid uuid v7"
-)]
-struct Mkid7 {
-    /// Copy output to clipboard
-    #[arg(short, long)]
-    clipboard: bool,
+    // Collect all arguments passed to mkid7
+    let args: Vec<String> = env::args().skip(1).collect();
 
-    #[command(flatten)]
-    uuid_args: UuidArgs,
-}
+    // Execute: mkid uuid v7 [args...]
+    let status = Command::new(mkid_path)
+        .arg("uuid")
+        .arg("v7")
+        .args(&args)
+        .status()
+        .expect("Failed to execute mkid");
 
-fn main() -> Result<()> {
-    let mkid7 = Mkid7::parse();
-
-    // Force version to v7
-    let mut uuid_args = mkid7.uuid_args;
-    uuid_args.version = Some("v7".to_string());
-
-    // Determine format type
-    let format_type = FormatType::from_str(&uuid_args.format);
-
-    // Generate UUIDs based on count
-    let mut outputs = Vec::new();
-    for _ in 0..uuid_args.count {
-        let uuid = generate_uuid(&uuid_args)?;
-        let formatted = format_uuid(&uuid, uuid_args.uppercase, format_type);
-        outputs.push(formatted);
-    }
-
-    // Print to stdout
-    for output in &outputs {
-        println!("{}", output);
-    }
-
-    // Copy to clipboard if requested
-    if mkid7.clipboard {
-        let clipboard_content = outputs.join("\n");
-        copy_to_clipboard(&clipboard_content)?;
-    }
-
-    Ok(())
+    exit(status.code().unwrap_or(1));
 }
