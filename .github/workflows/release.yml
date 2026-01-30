@@ -101,7 +101,7 @@ jobs:
         if: matrix.os != 'windows-latest'
         run: |
           cd target/${{ matrix.target }}/release
-          tar czf ../../../mkid-${{ matrix.target }}-${{ steps.version.outputs.VERSION }}.tar.gz ${{ matrix.artifact }}
+          tar czf ../../../mkid-${{ matrix.target }}-${{ steps.version.outputs.VERSION }}.tar.gz mkid mkid4 mkid7
           cd ../../..
           shasum -a 256 mkid-${{ matrix.target }}-${{ steps.version.outputs.VERSION }}.tar.gz > mkid-${{ matrix.target }}-${{ steps.version.outputs.VERSION }}.tar.gz.sha256
 
@@ -110,7 +110,7 @@ jobs:
         shell: bash
         run: |
           cd target/${{ matrix.target }}/release
-          7z a ../../../mkid-${{ matrix.target }}-${{ steps.version.outputs.VERSION }}.zip ${{ matrix.artifact }}
+          7z a ../../../mkid-${{ matrix.target }}-${{ steps.version.outputs.VERSION }}.zip mkid.exe mkid4.exe mkid7.exe
           cd ../../..
           sha256sum mkid-${{ matrix.target }}-${{ steps.version.outputs.VERSION }}.zip > mkid-${{ matrix.target }}-${{ steps.version.outputs.VERSION }}.zip.sha256
 
