@@ -154,5 +154,12 @@
       "id": "peas-gowc6",
       "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-gowc6--setup-ci-cd-pipeline.md"
     }
+  },
+  {
+    "Update": {
+      "id": "peas-gowc6",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-gowc6--setup-ci-cd-pipeline.md",
+      "previous_content": "+++\nid = \"peas-gowc6\"\ntitle = \"Setup CI/CD Pipeline\"\ntype = \"epic\"\nstatus = \"todo\"\npriority = \"normal\"\ncreated = \"2026-01-30T19:06:44.198315Z\"\nupdated = \"2026-01-30T19:06:44.198315Z\"\n+++\n\nCopy and adapt CI/CD setup from peas repository including GitHub Actions workflows, release automation, and licensing\n"
+    }
   }
 ]

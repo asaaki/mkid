@@ -1,6 +1,6 @@
 [package]
 name = "mkid"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2024"
 authors = ["Christoph Grabo <chris@christophgrabo.com>"]
 description = "A tiny CLI tool to generate unique IDs (UUIDs v1-v8)"
