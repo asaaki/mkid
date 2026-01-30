@@ -1,0 +1,158 @@
+[
+  {
+    "Create": {
+      "id": "peas-nyjm6",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-nyjm6--mkid-v1-0-uuid-generator-cli.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-6ve7r",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-6ve7r--project-setup-dependencies.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-d1w2n",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-d1w2n--update-cargo-toml-dependencies.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-y3v0h",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-y3v0h--create-module-structure.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-pqr6w",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-pqr6w--cli-argument-parsing.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-hgeuh",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-hgeuh--define-base-cli-structure.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-stu2k",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-stu2k--define-uuid-subcommand-arguments.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-rwyxg",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-rwyxg--add-version-specific-parameters.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-toidd",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-toidd--uuid-generation-logic.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-5gucq",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-5gucq--implement-uuid-v4-and-v7-generation.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-1kdrt",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-1kdrt--implement-uuid-v1-and-v6-generation.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-7stdk",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-7stdk--implement-uuid-v3-and-v5-generation.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-62sm9",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-62sm9--implement-uuid-v8-generation.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-mbdfl",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-mbdfl--output-formatting-clipboard.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-s313m",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-s313m--implement-uuid-formatting.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-xb8pe",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-xb8pe--implement-clipboard-integration.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-a1m9z",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-a1m9z--main-application-logic.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-z1z4u",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-z1z4u--implement-main-logic-flow.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-rrceb",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-rrceb--implement-default-v7-behavior.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-ft45d",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-ft45d--testing-validation.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-ooltt",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-ooltt--integration-tests-for-cli.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-7etro",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-7etro--manual-testing-verification.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-yotnw",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-yotnw--documentation-polish.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-s49l2",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-s49l2--update-readme-md.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-rdysg",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-rdysg--code-cleanup-linting.md"
+    }
+  },
+  {
+    "Create": {
+      "id": "peas-gowc6",
+      "file_path": "/Users/asaaki/Development/Shared/gh.asaaki/mkid/.peas/peas-gowc6--setup-ci-cd-pipeline.md"
+    }
+  }
+]
