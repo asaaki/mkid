@@ -4,13 +4,14 @@ A tiny Rust-based CLI tool to generate unique IDs, primarily UUIDs. Built as a m
 
 ## Features
 
+- **Quick shortcuts**: `mkid4` and `mkid7` for instant UUID generation
 - **All UUID versions supported**: v1 through v8
 - **Smart defaults**: `mkid` generates UUID v7 (sortable, database-friendly)
 - **Multiple formats**: hyphenated, simple, URN, braced
 - **Case control**: lowercase (default) or uppercase
 - **Clipboard integration**: Copy output directly to clipboard
 - **Bulk generation**: Generate multiple UUIDs at once
-- **Fast and lightweight**: Single binary, minimal dependencies
+- **Fast and lightweight**: Three small binaries, minimal dependencies
 
 ## Installation
 
@@ -45,6 +46,20 @@ cargo install --path .
 ```
 
 ## Usage
+
+### Quick Shortcuts
+
+For maximum convenience, use the shortcut commands:
+
+```bash
+# UUID v4 (random) - fastest way
+mkid4
+# Output: 18431fda-68f1-42af-9318-1ece3d60281e
+
+# UUID v7 (sortable) - fastest way
+mkid7
+# Output: 019c1064-a92c-74f0-98d9-03496f8a9693
+```
 
 ### Basic Usage
 

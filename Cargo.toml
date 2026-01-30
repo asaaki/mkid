@@ -18,6 +18,18 @@ pkg-fmt = "tgz"
 [package.metadata.binstall.overrides.x86_64-pc-windows-msvc]
 pkg-fmt = "zip"
 
+[[bin]]
+name = "mkid"
+path = "src/main.rs"
+
+[[bin]]
+name = "mkid4"
+path = "src/mkid4.rs"
+
+[[bin]]
+name = "mkid7"
+path = "src/mkid7.rs"
+
 [profile.release]
 lto = true
 strip = true
