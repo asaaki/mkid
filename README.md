@@ -14,15 +14,34 @@ A tiny Rust-based CLI tool to generate unique IDs, primarily UUIDs. Built as a m
 
 ## Installation
 
+### With cargo-binstall (recommended)
+
+The fastest way to install pre-built binaries:
+
 ```bash
-cargo install --path .
+cargo binstall mkid
 ```
 
-Or build from source:
+### From GitHub releases
+
+Download pre-built binaries directly from [GitHub releases](https://github.com/asaaki/mkid/releases).
+
+### From crates.io
+
+Build from source via crates.io:
 
 ```bash
-cargo build --release
-# Binary available at target/release/mkid
+cargo install mkid --locked
+```
+
+### From source
+
+Build from the repository:
+
+```bash
+git clone https://github.com/asaaki/mkid
+cd mkid
+cargo install --path .
 ```
 
 ## Usage
