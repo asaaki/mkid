@@ -1,9 +1,14 @@
 use assert_cmd::Command;
 use uuid::Uuid;
 
+#[allow(deprecated)]
+fn get_cmd() -> Command {
+    Command::cargo_bin(env!("CARGO_PKG_NAME")).unwrap()
+}
+
 #[test]
 fn test_default_generates_v7() {
-    let mut cmd = Command::cargo_bin("mkid").unwrap();
+    let mut cmd = get_cmd();
     let output = cmd.assert().success();
     let stdout = String::from_utf8(output.get_output().stdout.clone()).unwrap();
     let uuid_str = stdout.trim();
@@ -17,7 +22,7 @@ fn test_default_generates_v7() {
 
 #[test]
 fn test_uuid_v4() {
-    let mut cmd = Command::cargo_bin("mkid").unwrap();
+    let mut cmd = get_cmd();
     let output = cmd.args(["uuid", "v4"]).assert().success();
     let stdout = String::from_utf8(output.get_output().stdout.clone()).unwrap();
     let uuid_str = stdout.trim();
@@ -28,14 +33,14 @@ fn test_uuid_v4() {
 
 #[test]
 fn test_uuid_v5_deterministic() {
-    let mut cmd1 = Command::cargo_bin("mkid").unwrap();
+    let mut cmd1 = get_cmd();
     let output1 = cmd1
         .args(["uuid", "v5", "--namespace", "dns", "--name", "example.com"])
         .assert()
         .success();
     let uuid1 = String::from_utf8(output1.get_output().stdout.clone()).unwrap();
 
-    let mut cmd2 = Command::cargo_bin("mkid").unwrap();
+    let mut cmd2 = get_cmd();
     let output2 = cmd2
         .args(["uuid", "v5", "--namespace", "dns", "--name", "example.com"])
         .assert()
@@ -47,7 +52,7 @@ fn test_uuid_v5_deterministic() {
 
 #[test]
 fn test_format_simple() {
-    let mut cmd = Command::cargo_bin("mkid").unwrap();
+    let mut cmd = get_cmd();
     let output = cmd
         .args(["uuid", "v7", "--format", "simple"])
         .assert()
@@ -62,7 +67,7 @@ fn test_format_simple() {
 
 #[test]
 fn test_format_urn() {
-    let mut cmd = Command::cargo_bin("mkid").unwrap();
+    let mut cmd = get_cmd();
     let output = cmd
         .args(["uuid", "v7", "--format", "urn"])
         .assert()
@@ -75,7 +80,7 @@ fn test_format_urn() {
 
 #[test]
 fn test_format_braced() {
-    let mut cmd = Command::cargo_bin("mkid").unwrap();
+    let mut cmd = get_cmd();
     let output = cmd
         .args(["uuid", "v7", "--format", "braced"])
         .assert()
@@ -89,7 +94,7 @@ fn test_format_braced() {
 
 #[test]
 fn test_uppercase() {
-    let mut cmd = Command::cargo_bin("mkid").unwrap();
+    let mut cmd = get_cmd();
     let output = cmd.args(["uuid", "v7", "--uppercase"]).assert().success();
     let stdout = String::from_utf8(output.get_output().stdout.clone()).unwrap();
     let uuid_str = stdout.trim();
@@ -107,7 +112,7 @@ fn test_uppercase() {
 
 #[test]
 fn test_count() {
-    let mut cmd = Command::cargo_bin("mkid").unwrap();
+    let mut cmd = get_cmd();
     let output = cmd.args(["uuid", "v7", "--count", "5"]).assert().success();
     let stdout = String::from_utf8(output.get_output().stdout.clone()).unwrap();
     let lines: Vec<&str> = stdout.lines().collect();
@@ -122,7 +127,7 @@ fn test_count() {
 
 #[test]
 fn test_v7_monotonic() {
-    let mut cmd = Command::cargo_bin("mkid").unwrap();
+    let mut cmd = get_cmd();
     let output = cmd.args(["uuid", "v7", "--count", "10"]).assert().success();
     let stdout = String::from_utf8(output.get_output().stdout.clone()).unwrap();
     let lines: Vec<&str> = stdout.lines().collect();
@@ -140,7 +145,7 @@ fn test_v7_monotonic() {
 
 #[test]
 fn test_error_v5_missing_name() {
-    let mut cmd = Command::cargo_bin("mkid").unwrap();
+    let mut cmd = get_cmd();
     cmd.args(["uuid", "v5", "--namespace", "dns"])
         .assert()
         .failure()
@@ -149,7 +154,7 @@ fn test_error_v5_missing_name() {
 
 #[test]
 fn test_error_v8_invalid_bytes() {
-    let mut cmd = Command::cargo_bin("mkid").unwrap();
+    let mut cmd = get_cmd();
     cmd.args(["uuid", "v8", "--bytes", "123"])
         .assert()
         .failure()
